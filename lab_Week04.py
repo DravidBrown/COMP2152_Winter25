@@ -81,7 +81,10 @@ loot_options = ["Health Potion", "Poison Potion", "Secret Note", "Leather Boots"
 good_loot_options = ["Health Potion", "Leather Boots"]
 bad_loot_options = ["Poison Potion"]
 
-#LAb04-01
+#LAB04-Q4
+belt=[]
+
+#LAb04-Q1
 #Define the monster Power
 monster_powers={
     "Fire Mgaic":2,
@@ -162,6 +165,11 @@ print("--- You have a strong player: " + str((combat_strength + health_points) >
 #LAB04-Q2-Roll for the monster's power
 input("Roll the dice for your health points (Press enter)")
 power_roll=random.choice("Fire Mgaic","Freezing Time","Super Hearing")
+
+#LAB04-Q3-Increase the monsters strength
+m_combat_strength = min(6, combat_strength +monster_powers [power_roll])
+print("The monster combat strength is"+str(m_combat_strength)+"using the"+power_roll+"Magic power!")
+
 # Loop while the monster and the player are alive. Call fight sequence functions
 print("You meet the monster. FIGHT!!")
 while m_health_points > 0 and health_points > 0:
